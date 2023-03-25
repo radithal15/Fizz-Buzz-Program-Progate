@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FizzBuzz Program</title>
+  </head>
+  <body>
+    <label for="numInput">Input a number:</label>
+    <input type="text" id="numInput" name="numInput"><br><br>
+    <button type="button" onclick="showResult()">Submit</button>
+    <div id="result"></div>
+    <script>
+      function fizzBuzz(num) {
+        if (num == 0) {
+          return "Invalid input";
+        }  
+          else if (num % 3 === 0 && num % 5 === 0) {
+          return "FizzBuzz";
+        } else if (num % 3 === 0) {
+          return "Fizz";
+        } else if (num % 5 === 0) {
+          return "Buzz";
+        } else {
+          return `${num}`;
+        }
+      }
+
+      function showResult() {
+        const num = parseInt(document.getElementById("numInput").value);
+        const result = fizzBuzz(num);
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
