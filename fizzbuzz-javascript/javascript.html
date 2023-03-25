@@ -4,8 +4,8 @@
     <title>FizzBuzz Program</title>
   </head>
   <body>
-    <label for="numInput">Input a number:</label>
-    <input type="text" id="numInput" name="numInput"><br><br>
+    <label for="input">Type a number:</label>
+    <input type="text" id="input" name="input">
     <button type="button" onclick="showResult()">Submit</button>
     <div id="result"></div>
     <script>
@@ -25,7 +25,7 @@
       }
 
       function showResult() {
-        const num = parseInt(document.getElementById("numInput").value);
+        const num = parseInt(document.getElementById("input").value);
         const result = fizzBuzz(num);
         document.getElementById("result").innerHTML = result;
       }
